@@ -14,7 +14,7 @@ const Footer = () => (
           <h2>
             <Link href="/">GoDesk</Link>
           </h2>
-          <p>Contact No : 0123456789</p>
+          <p>Contact No : +91 9483614719</p>
         </Grid>
         <Grid item md={3}>
           {/* <div className="link">

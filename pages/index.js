@@ -152,7 +152,7 @@ const Home = () => {
                     <PhoneIcon className="icon" />
                   </div>
                   <div className="unit-body">
-                    <a href="tel:#">+1 323-913-4688</a>
+                    <a href="tel:#">+91 9483614719</a>
                   </div>
                 </div>
               </li>
