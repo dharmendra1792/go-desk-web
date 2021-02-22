@@ -652,6 +652,9 @@
 .footer-area .link {
   margin-bottom: 0.8rem;
 }
+.footer-area .link:hover {
+  color: #f2695c;
+}
 .footer-area .social-links {
   color: #f2695c;
   padding: 0;

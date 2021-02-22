@@ -122,8 +122,9 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                 <DialogContent>
                   {submitStatus ? (
                     <DialogContentText className="text-center color-3">
-                      Appointment booked successfully. We will get back to you
-                      soon.
+                      Thanks for raising your support request, We are there to
+                      assist you!. Our Technician will reach out to you in few
+                      hours.
                     </DialogContentText>
                   ) : null}
                   <Grid container spacing={2}>

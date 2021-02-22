@@ -62,7 +62,7 @@ const Home = () => {
                   </div>
                   <div className="unit-body">
                     <p>
-                      Bangalore, Chennai
+                      Bangalore
                       {/* 09:00<span>am</span> — 05:00<span>pm</span> */}
                     </p>
                   </div>
@@ -221,7 +221,7 @@ const Home = () => {
                 <div className="container service-3">
                   <div className="without-hover">
                     <div className="centered">
-                      <h2>@699</h2>
+                      <h2>@599</h2>
                       <Button variant="contained" color="secondary">
                         Book
                       </Button>
@@ -797,7 +797,9 @@ const Home = () => {
                       <LocationOnIcon className="icon" />
                     </div>
                     <div className="box-info-text">
-                      <p>Bangalore, Chennai</p>
+                      <p>
+                        GoDesk 1678, 27th Main, HSR Layout, Bangalore 560102
+                      </p>
                     </div>
                   </div>
                 </article>

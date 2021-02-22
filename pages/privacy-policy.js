@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Container from "@material-ui/core/Container";
 import Layout from "../components/Layout";
 
@@ -11,6 +12,12 @@ const PrivacyPolicy = () => {
       </Head>
       <Layout>
         <Container className="terms-page">
+          <h4 className="welcome-text color-2">
+            Privacy Policy{" "}
+            <span className="color-3 ml-1">
+              <Link href="/">"Go to Home"</Link>
+            </span>
+          </h4>
           <h2 className="h2-heading mb-1">Privacy Policy</h2>
           <p className="p-para mb-1">
             This Online Privacy Notice (“Notice”) applies to this website

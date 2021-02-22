@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Container from "@material-ui/core/Container";
 import Layout from "../components/Layout";
 
@@ -11,6 +12,12 @@ const TermsAndConditions = () => {
       </Head>
       <Layout>
         <Container className="terms-page">
+          <h4 className="welcome-text color-2">
+            Terms and Conditions{" "}
+            <span className="color-3 ml-1">
+              <Link href="/">"Go to Home"</Link>
+            </span>
+          </h4>
           <h2 className="h2-heading mb-1">Terms of Use</h2>
           <p className="p-para mb-1">
             Welcome to GoDesk You my use the website, services, content,

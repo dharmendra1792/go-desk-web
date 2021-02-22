@@ -41,8 +41,11 @@ const AboutUs = () => {
                 Team GoDesk is committed to care & maintain your mission
                 critical devices that keeps you moving. We believe in providing
                 a personalized, Intelligent, Secure and trustable IT support
-                Experience All our Technician are background verified and
-                trained to deliver only the best experience.
+                Experience.
+              </p>
+              <p className="p-text mb-1">
+                All our Technician are background verified and trained to
+                deliver only the best experience.
               </p>
             </Grid>
             <Grid item md={2}></Grid>
