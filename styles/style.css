@@ -264,7 +264,7 @@
   background: #ffffff;
   padding: 50px 0;
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .work-section .bg-line {
     background-image: url("../public/images/line-background.png");
     position: relative;
@@ -272,7 +272,7 @@
     background-position: 50% 48%;
     background-size: cover;
   }
-}
+} */
 .work-section .img {
   display: flex;
   justify-content: center;
