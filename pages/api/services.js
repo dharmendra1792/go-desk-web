@@ -115,7 +115,7 @@ const Services = [
         id: 8,
         title: "Installation",
         discription:
-          "Remote work presents distinct challenges be it an software installation or setup of an Virtual Desktop or looking to assemble an high end desktop, Our experts.",
+          "Remote work presents distinct challenges be it an software installation or setup of an Virtual Laptop or looking to assemble an high end laptop, Our experts.",
       },
       {
         id: 9,
@@ -127,31 +127,7 @@ const Services = [
         id: 10,
         title: "Slowness & Hanging",
         discription:
-          "Fixing a desktop which is crashing, slower and popping up annoying messages, we have a range of tune-up services to resolve this by remote or field technician.",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Printer",
-    items: [
-      {
-        id: 1,
-        title: "Unable to Print",
-        discription:
-          "Facing a printer problem that just won’t go away, the best thing you can do is find an expert.",
-      },
-      {
-        id: 2,
-        title: "Cartridge & Refill",
-        discription:
-          "Troubleshooting your cartridge issues and providing refill support at the right time.",
-      },
-      {
-        id: 3,
-        title: "Printer dead",
-        discription:
-          "We have fixed 100’s of printers and most of the time’s its simple, our remote support will fix.",
+          "Fixing a laptop which is crashing, slower and popping up annoying messages, we have a range of tune-up services to resolve this by remote or field technician.",
       },
     ],
   },
@@ -176,6 +152,30 @@ const Services = [
         title: "Software issue",
         discription:
           "Experiencing slowness or weak signal Your Tablet could be suffering from a variety of issues including water damage, or outdated software.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Printer",
+    items: [
+      {
+        id: 1,
+        title: "Unable to Print",
+        discription:
+          "Facing a printer problem that just won’t go away, the best thing you can do is find an expert.",
+      },
+      {
+        id: 2,
+        title: "Cartridge & Refill",
+        discription:
+          "Troubleshooting your cartridge issues and providing refill support at the right time.",
+      },
+      {
+        id: 3,
+        title: "Printer dead",
+        discription:
+          "We have fixed 100’s of printers and most of the time’s its simple, our remote support will fix.",
       },
     ],
   },

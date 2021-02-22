@@ -13,10 +13,13 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "formik": "^2.2.6",
     "isomorphic-unfetch": "^3.1.0",
     "mongoose": "^5.11.16",
+    "mui-datatables": "^3.7.6",
     "next": "10.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "yup": "^0.32.9"
   }
 }

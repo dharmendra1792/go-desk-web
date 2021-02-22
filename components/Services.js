@@ -138,14 +138,14 @@ export default function Services() {
           flex: 0 1 auto;
         }
         .contain-box .box-unit-body h5 {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 400;
           color: #127ca6;
         }
         .contain-box p {
           color: #123340;
-          font-size: 18px;
-          margin-top: 10px;
+          font-size: 16px;
+          margin-top: 5px;
         }
       `}</style>
     </div>

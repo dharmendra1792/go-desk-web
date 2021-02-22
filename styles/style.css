@@ -152,8 +152,8 @@
   font-weight: 500;
   text-align: center;
 }
-.welcome-text span {
-  color: #f2695c;
+.welcome-text span button {
+  margin-left: 12px;
 }
 
 .heading {
@@ -174,7 +174,7 @@
   color: #123340;
 }
 .color-3 {
-  color: #f2695c;
+  color: #f2695c !important;
 }
 .color-white {
   color: #ffffff;
@@ -212,7 +212,7 @@
   height: 380px;
   background-position: 50% 50%;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.7;
   border-radius: 5px;
 }
 /* .service-1 {
@@ -249,6 +249,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 6px;
 }
 .pricing-section .centered h2 {
   font-size: 4.5rem;
@@ -261,6 +263,15 @@
 .work-section {
   background: #ffffff;
   padding: 50px 0;
+}
+@media (min-width: 992px) {
+  .work-section .bg-line {
+    background-image: url("../public/images/line-background.png");
+    position: relative;
+    width: 100%;
+    background-position: 50% 48%;
+    background-size: cover;
+  }
 }
 .work-section .img {
   display: flex;
@@ -600,6 +611,7 @@
   color: #127ca6;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
 }
 .help-center-page .box-info-icon {
   float: left;

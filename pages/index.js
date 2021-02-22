@@ -15,17 +15,10 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import fetch from "isomorphic-unfetch";
 
 import Layout from "../components/Layout";
 import Services from "../components/Services";
+import AppointmentDialog from "../components/AppointmentDialog";
 
 // export default function Home() {
 const Home = () => {
@@ -34,107 +27,13 @@ const Home = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [openDialog, setOpenDialog] = useState(false);
-  const clickOpenDialog = () => {
-    setOpenDialog(true);
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
   };
-  const closeDialog = () => {
-    setOpenDialog(false);
+  const handleClose = () => {
+    setOpen(false);
   };
-
-  const defaultData = {
-    email: "",
-    name: "",
-    mobile: "",
-    address: "",
-    brand: "",
-    model: "",
-    serial_no: "",
-    warranty: "",
-    description: "",
-  };
-  const [form, setForm] = useState(defaultData);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(false);
-  const [errors, setErrors] = useState({});
-  const bookAppointment = (e) => {
-    e.preventDefault();
-    let errs = validate();
-    setErrors(errs);
-    setIsSubmitting(true);
-  };
-
-  const createAppoinment = async () => {
-    try {
-      const res = await fetch(process.env.API_URL + "/api/appointments", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-      console.log("========Booked Appoinment==========");
-      setSubmitStatus(true);
-      setIsSubmitting(false);
-      setTimeout(() => {
-        setSubmitStatus(false);
-        setOpenDialog(false);
-      }, 6000);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const handleField = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const validate = () => {
-    let err = {};
-
-    if (!form.email) {
-      err.email = "Email is required";
-    }
-    if (!form.name) {
-      err.name = "Name is required";
-    }
-    if (!form.mobile) {
-      err.mobile = "Mobile is required";
-    }
-    if (!form.address) {
-      err.address = "Address is required";
-    }
-    if (!form.brand) {
-      err.brand = "Brand is required";
-    }
-    if (!form.description) {
-      err.description = "Description is required";
-    }
-    if (!form.model) {
-      err.model = "Model is required";
-    }
-    if (!form.serial_no) {
-      err.serial_no = "Serial no is required";
-    }
-    if (!form.description) {
-      err.description = "Description is required";
-    }
-    return err;
-  };
-
-  useEffect(() => {
-    if (isSubmitting) {
-      if (Object.keys(errors).length === 0) {
-        createAppoinment();
-      } else {
-        setIsSubmitting(false);
-      }
-    }
-  }, [errors]);
 
   return (
     <div className="home-page">
@@ -192,192 +91,12 @@ const Home = () => {
             <Button
               variant="contained"
               color="secondary"
-              onClick={clickOpenDialog}
+              onClick={handleClickOpen}
             >
               Book Appointment
             </Button>
           </Container>
         </section>
-
-        {/* Book Appointment Dialog */}
-        <Dialog
-          fullWidth
-          maxWidth="lg"
-          open={openDialog}
-          onClose={closeDialog}
-          aria-labelledby="form-dialog-title"
-          disableBackdropClick={true}
-        >
-          <form onSubmit={bookAppointment}>
-            <DialogTitle id="form-dialog-title" className="text-center">
-              Book Appointment
-            </DialogTitle>
-            <DialogContent>
-              <DialogContentText className="text-center">
-                {submitStatus ? (
-                  <p className="color-3">
-                    Appointment booked successfully. We will get back to you
-                    soon.
-                  </p>
-                ) : null}
-              </DialogContentText>
-              <Grid container spacing={2}>
-                <Grid item md={6}>
-                  <TextField
-                    autoFocus
-                    margin="dense"
-                    id="email"
-                    label="Email Address"
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    fullWidth
-                    helperText={errors.email === "" ? " " : errors.email}
-                    error={errors.email ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="name"
-                    label="Name"
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    fullWidth
-                    helperText={errors.name === "" ? " " : errors.name}
-                    error={errors.name ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="mobile"
-                    label="Mobile"
-                    type="text"
-                    placeholder="Mobile"
-                    name="mobile"
-                    fullWidth
-                    helperText={errors.mobile === "" ? " " : errors.mobile}
-                    error={errors.mobile ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="address"
-                    label="Address"
-                    type="text"
-                    placeholder="Address"
-                    name="address"
-                    fullWidth
-                    helperText={errors.address === "" ? " " : errors.address}
-                    error={errors.address ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="brand"
-                    label="Brand"
-                    type="text"
-                    placeholder="Brand"
-                    name="brand"
-                    fullWidth
-                    helperText={errors.brand === "" ? " " : errors.brand}
-                    error={errors.brand ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="model"
-                    label="Model"
-                    type="text"
-                    placeholder="Model"
-                    name="model"
-                    fullWidth
-                    helperText={errors.model === "" ? " " : errors.model}
-                    error={errors.model ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="serial_no"
-                    label="Serial No"
-                    type="text"
-                    placeholder="Serial No"
-                    name="serial_no"
-                    fullWidth
-                    helperText={
-                      errors.serial_no === "" ? " " : errors.serial_no
-                    }
-                    error={errors.serial_no ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={6}>
-                  <TextField
-                    margin="dense"
-                    id="warranty"
-                    label="Warranty"
-                    type="text"
-                    placeholder="Warranty"
-                    name="warranty"
-                    fullWidth
-                    onChange={handleField}
-                  />
-                </Grid>
-                <Grid item md={12}>
-                  <TextField
-                    margin="dense"
-                    id="description"
-                    label="Description"
-                    type="text"
-                    placeholder="Description"
-                    name="description"
-                    fullWidth
-                    multiline
-                    rows={3}
-                    helperText={
-                      errors.description === "" ? " " : errors.description
-                    }
-                    error={errors.description ? { pointing: "below" } : null}
-                    onChange={handleField}
-                  />
-                </Grid>
-              </Grid>
-            </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={closeDialog}
-                variant="contained"
-                color="secondary"
-              >
-                Cancel
-              </Button>
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <CircularProgress style={{ width: "20px", height: "20px" }} />
-                ) : null}
-                Book
-              </Button>
-            </DialogActions>
-          </form>
-        </Dialog>
-        {/* end of Book Appointment Dialog */}
 
         <section className="carousel-section carousel-section-bg">
           {/* <img src="./images/Carousel-1.JPG" alt="bg-image" /> */}
@@ -387,7 +106,7 @@ const Home = () => {
             <p>Quick Fix | Expert Staff | Affordable</p>
           </div>
           <div className="top-right">
-            <img src="./images/Warrenty logo.png" alt="guarantee image" />
+            <img src="./images/warrenty-logo.png" alt="guarantee image" />
           </div>
         </section>
         <section className="carousel-bottom">
@@ -431,8 +150,16 @@ const Home = () => {
           </Container>
         </section>
         <h4 className="welcome-text color-2">
-          Welcome to GoDesk
-          {/* Complete your profile Get <span>100</span> Free Coins */}
+          Welcome to GoDesk{" "}
+          <span>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={handleClickOpen}
+            >
+              Book Appointment
+            </Button>
+          </span>
         </h4>
         {/* services-section */}
         <section className="services-section">
@@ -448,7 +175,7 @@ const Home = () => {
           <Container>
             <h2 className="heading mb-2">Support at Your Convenience</h2>
             <Grid container spacing={2} alignItems="center" justify="center">
-              <Grid item md={3}>
+              <Grid item md={3} className="full-width">
                 <h4>Remote Support</h4>
                 <div className="container service-1">
                   <div className="without-hover">
@@ -469,7 +196,7 @@ const Home = () => {
                   </div>
                 </div>
               </Grid>
-              <Grid item md={3}>
+              <Grid item md={3} className="full-width">
                 <h4>Doorstep (Field) Support</h4>
                 <div className="container service-2">
                   <div className="without-hover">
@@ -490,7 +217,7 @@ const Home = () => {
                   </div>
                 </div>
               </Grid>
-              <Grid item md={3}>
+              <Grid item md={3} className="full-width">
                 <h4>Express Support</h4>
                 <div className="container service-3">
                   <div className="without-hover">
@@ -511,7 +238,7 @@ const Home = () => {
                   </div>
                 </div>
               </Grid>
-              <Grid item md={3}>
+              <Grid item md={3} className="full-width">
                 <h4>Buying Guide</h4>
                 <div className="container service-4">
                   <div className="without-hover">
@@ -545,7 +272,13 @@ const Home = () => {
               Powering a personalized, intelligent, secure and trustable IT
               support experience
             </p>
-            <Grid container spacing={2} alignItems="center" justify="center">
+            <Grid
+              container
+              spacing={2}
+              alignItems="center"
+              justify="center"
+              className="bg-line"
+            >
               <Grid item md={3}>
                 <div className="img">
                   <img src="./images/work-1.jpg" alt="work-1" />
@@ -673,7 +406,7 @@ const Home = () => {
                   variant="contained"
                   className="full-width"
                   color="secondary"
-                  onClick={clickOpenDialog}
+                  onClick={handleClickOpen}
                 >
                   Book Appointment
                 </Button>
@@ -1052,7 +785,7 @@ const Home = () => {
                   </AccordionDetails>
                 </Accordion>
               </Grid>
-              <Grid item md={4}>
+              <Grid item md={4} className="mt-2">
                 <article className="box-info">
                   <div className="box-info-body">
                     <div className="box-info-icon">
@@ -1073,6 +806,7 @@ const Home = () => {
             </Grid>
           </Container>
         </section>
+        <AppointmentDialog openDialog={open} closeDialog={handleClose} />
         {/* end of FAQ */}
         <style jsx>{`
           .carousel-section-bg {
@@ -1081,26 +815,26 @@ const Home = () => {
                 rgba(245, 246, 252, 0.52),
                 rgba(23, 49, 59, 0.41)
               ),
-              url("./images/Carousel-1.JPG");
+              url("./images/carousel-1.jpg");
           }
           .feature-section-bg {
             background-image: linear-gradient(
                 rgba(177 169 169 / 52%),
                 rgba(18, 19, 19, 0.41)
               ),
-              url("./images/feature-bg.JPG");
+              url("./images/feature-bg.jpg");
           }
           .service-1 {
-            background-image: url("./images/Remote-Service.JPG");
+            background-image: url("./images/remote-service.jpg");
           }
           .service-2 {
-            background-image: url("./images/Doorstep-Service.JPG");
+            background-image: url("./images/doorstep-service.jpg");
           }
           .service-3 {
-            background-image: url("./images/Express-Service.PNG");
+            background-image: url("./images/express-service.png");
           }
           .service-4 {
-            background-image: url("./images/Buying-Guide.PNG");
+            background-image: url("./images/buying-guide.png");
           }
         `}</style>
       </Layout>
