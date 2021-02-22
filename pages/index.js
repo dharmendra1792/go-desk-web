@@ -98,7 +98,7 @@ const Home = () => {
           </Container>
         </section>
 
-        <section className="carousel-section carousel-section-bg">
+        <section className="carousel-section">
           <div className="top-left-center">
             <p>IT Services @ your</p>
             <h1>Doorstep</h1>
@@ -313,7 +313,7 @@ const Home = () => {
         {/* end of work-section */}
 
         {/* feature-section */}
-        <section className="feature-section feature-section-bg">
+        <section className="feature-section">
           <Container>
             <h2 className="heading mb-1">Why US</h2>
             <Grid container spacing={2}>
@@ -807,35 +807,6 @@ const Home = () => {
         </section>
         <AppointmentDialog openDialog={open} closeDialog={handleClose} />
         {/* end of FAQ */}
-        <style jsx>{`
-          .carousel-section-bg {
-            background-image: linear-gradient(
-                to left,
-                rgba(245, 246, 252, 0.52),
-                rgba(23, 49, 59, 0.41)
-              ),
-              url("./images/bg-carousel-1.jpg");
-          }
-          .feature-section-bg {
-            background-image: linear-gradient(
-                rgba(177 169 169 / 52%),
-                rgba(18, 19, 19, 0.41)
-              ),
-              url("./images/feature-bg.jpg");
-          }
-          .service-1 {
-            background-image: url("./images/bg-remote-service.jpg");
-          }
-          .service-2 {
-            background-image: url("./images/bg-doorstep-service.jpg");
-          }
-          .service-3 {
-            background-image: url("./images/bg-express-service.png");
-          }
-          .service-4 {
-            background-image: url("./images/bg-buying-guide.png");
-          }
-        `}</style>
       </Layout>
     </div>
   );

@@ -127,7 +127,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                     </DialogContentText>
                   ) : null}
                   <Grid container spacing={2}>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         autoFocus
                         margin="dense"
@@ -144,7 +144,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="name"
@@ -160,7 +160,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="mobile"
@@ -176,7 +176,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="address"
@@ -192,7 +192,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="brand"
@@ -208,7 +208,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="model"
@@ -224,7 +224,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="serial_no"
@@ -240,7 +240,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} className="full-width">
                       <TextField
                         margin="dense"
                         id="warranty"
@@ -256,7 +256,7 @@ export default function AppointmentDialog({ openDialog, closeDialog }) {
                         disabled={disableField}
                       />
                     </Grid>
-                    <Grid item md={12}>
+                    <Grid item md={12} className="full-width">
                       <TextField
                         margin="dense"
                         id="description"

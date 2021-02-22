@@ -7,8 +7,8 @@ export default function Breadcrumbs({ title, bgImage }) {
       <section className="breadcrumbs-custom-inset">
         <div className="breadcrumbs-custom context-dark bg-overlay-41">
           <Container>
-            <h2 className="breadcrumbs-custom-title">{title}</h2>
-            <ul className="breadcrumbs-custom-path">
+            <h2>{title}</h2>
+            <ul className="breadcrumbs-ul">
               <li>
                 <Link href="/">
                   <a>Home</a>
@@ -65,7 +65,7 @@ export default function Breadcrumbs({ title, bgImage }) {
         .context-dark h2 {
           color: #ffffff;
         }
-        .breadcrumbs-custom-path {
+        .breadcrumbs-ul {
           padding: 0;
           margin-top: 14px;
           margin-left: -15px;
@@ -77,24 +77,24 @@ export default function Breadcrumbs({ title, bgImage }) {
           text-transform: uppercase;
           font-family: sans-serif;
         }
-        .breadcrumbs-custom-path li {
+        .breadcrumbs-ul li {
           position: relative;
           display: inline-block;
           vertical-align: middle;
         }
-        .breadcrumbs-custom-path li.active {
+        .breadcrumbs-ul li.active {
           color: rgba(255, 255, 255, 0.53);
         }
-        .breadcrumbs-custom-path > * {
+        .breadcrumbs-ul > * {
           padding-left: 15px;
           padding-right: 15px;
         }
-        .breadcrumbs-custom-path a,
-        .breadcrumbs-custom-path a:active,
-        .breadcrumbs-custom-path a:focus {
+        .breadcrumbs-ul a,
+        .breadcrumbs-ul a:active,
+        .breadcrumbs-ul a:focus {
           color: #f2695c;
         }
-        .breadcrumbs-custom-path a {
+        .breadcrumbs-ul a {
           display: inline;
           vertical-align: middle;
         }
@@ -104,10 +104,10 @@ export default function Breadcrumbs({ title, bgImage }) {
           color: #ffdb73;
           text-decoration: none;
         }
-        .breadcrumbs-custom-path a:hover {
+        .breadcrumbs-ul a:hover {
           color: #ffffff;
         }
-        .breadcrumbs-custom-path li:not(:last-child)::after {
+        .breadcrumbs-ul li:not(:last-child)::after {
           content: "/";
           display: inline-block;
           position: absolute;

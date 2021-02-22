@@ -9,14 +9,14 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 const Footer = () => (
   <footer className="footer-area">
     <Container>
-      <Grid container spacing={2} justify="center" className="full-width">
-        <Grid item md={3}>
+      <Grid container spacing={2} justify="center">
+        <Grid item md={3} className="full-width">
           <h2>
             <Link href="/">GoDesk</Link>
           </h2>
           <p>Contact No : +91 9483614719</p>
         </Grid>
-        <Grid item md={3}>
+        <Grid item md={3} className="full-width">
           {/* <div className="link">
             <Link href="/">
               <a>Register as Partner</a>
@@ -33,7 +33,7 @@ const Footer = () => (
             </Link>
           </div>
         </Grid>
-        <Grid item md={3}>
+        <Grid item md={3} className="full-width">
           {/* <div className="link">
             <Link href="/">
               <a>Rate GoDesk</a>
@@ -50,7 +50,7 @@ const Footer = () => (
             </Link>
           </div>
         </Grid>
-        <Grid item md={3}>
+        <Grid item md={3} className="full-width">
           <div style={{ textAlign: "right" }}>
             <ul className="social-links">
               <li>

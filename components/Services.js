@@ -66,7 +66,8 @@ export default function Services() {
           value={value}
           indicatorColor="primary"
           textColor="secondary"
-          variant="fullWidth"
+          variant="scrollable"
+          scrollButtons="auto"
           onChange={handleChange}
           aria-label="simple tabs example"
         >

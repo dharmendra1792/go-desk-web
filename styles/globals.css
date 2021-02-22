@@ -62,3 +62,10 @@ ul {
 .mt-2 {
   margin-top: 2rem;
 }
+
+/* mui-field-error */
+.MuiFormHelperText-root.Mui-error {
+  position: absolute;
+  bottom: -22px;
+}
+/* end of mui-field-error */
