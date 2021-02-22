@@ -99,7 +99,6 @@ const Home = () => {
         </section>
 
         <section className="carousel-section carousel-section-bg">
-          {/* <img src="./images/Carousel-1.JPG" alt="bg-image" /> */}
           <div className="top-left-center">
             <p>IT Services @ your</p>
             <h1>Doorstep</h1>
@@ -815,7 +814,7 @@ const Home = () => {
                 rgba(245, 246, 252, 0.52),
                 rgba(23, 49, 59, 0.41)
               ),
-              url("./images/carousel-1.jpg");
+              url("./images/bg-carousel-1.jpg");
           }
           .feature-section-bg {
             background-image: linear-gradient(
@@ -825,16 +824,16 @@ const Home = () => {
               url("./images/feature-bg.jpg");
           }
           .service-1 {
-            background-image: url("./images/remote-service.jpg");
+            background-image: url("./images/bg-remote-service.jpg");
           }
           .service-2 {
-            background-image: url("./images/doorstep-service.jpg");
+            background-image: url("./images/bg-doorstep-service.jpg");
           }
           .service-3 {
-            background-image: url("./images/express-service.png");
+            background-image: url("./images/bg-express-service.png");
           }
           .service-4 {
-            background-image: url("./images/buying-guide.png");
+            background-image: url("./images/bg-buying-guide.png");
           }
         `}</style>
       </Layout>
