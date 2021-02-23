@@ -15,6 +15,8 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import Layout from "../components/Layout";
 import Services from "../components/Services";
@@ -33,6 +35,25 @@ const Home = () => {
   };
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 7,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+    },
   };
 
   return (
@@ -438,8 +459,67 @@ const Home = () => {
         <section className="brand-section">
           <Container>
             <h2 className="heading">Multi-Brand Services</h2>
-            <p className="sub-heading">Diagnostic, Repair & Servicing</p>
-            <Grid container justify="center" alignItems="center" spacing={2}>
+            <p className="sub-heading mb-2">Diagnostic, Repair & Servicing</p>
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={2000}
+              keyBoardControl={true}
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              containerClass="carousel-container"
+              itemClass="carousel-item"
+            >
+              <div>
+                <img src="./images/brand-icons/dell-logo.png" alt="dell-logo" />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/apple-logo.png"
+                  alt="apple-logo"
+                />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/lenovo-logo.png"
+                  alt="lenovo-logo"
+                />
+              </div>
+              <div>
+                <img src="./images/brand-icons/acer-logo.png" alt="acer-logo" />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/toshiba-logo.png"
+                  alt="toshiba-logo"
+                />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/samsung-logo.png"
+                  alt="samsung-logo"
+                />
+              </div>
+              <div>
+                <img src="./images/brand-icons/hp-logo.png" alt="hp-logo" />
+              </div>
+              <div>
+                <img src="./images/brand-icons/asus-logo.png" alt="asus-logo" />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/canon-logo.png"
+                  alt="canon-logo"
+                />
+              </div>
+              <div>
+                <img
+                  src="./images/brand-icons/cisco-logo.png"
+                  alt="cisco-logo"
+                />
+              </div>
+            </Carousel>
+            {/* <Grid container justify="center" alignItems="center">
               <Grid item md={2} className="text-center">
                 <img
                   src="./images/brand-icons/dell-logo.png"
@@ -510,7 +590,7 @@ const Home = () => {
                   alt="cisco-logo"
                 />
               </Grid>
-            </Grid>
+            </Grid> */}
           </Container>
         </section>
         {/* end of brand-section */}

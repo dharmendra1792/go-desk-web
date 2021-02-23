@@ -27,7 +27,7 @@ const HelpCenter = () => {
       <Layout>
         <Breadcrumbs
           title="Help Center"
-          bgImage="./images/breadcrumbs-help-center.jpg"
+          bgImage="./images/breadcrumbs-help-center.svg"
         />
         <Container className="help-center-page">
           <Grid container spacing={3}>

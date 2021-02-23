@@ -25,7 +25,7 @@ const AboutUs = () => {
       <Layout>
         <Breadcrumbs
           title="About Us"
-          bgImage="./images/breadcrumbs-about-us.jpg"
+          bgImage="./images/breadcrumbs-about-us.svg"
         />
         <Container className="about-us-page">
           <Grid container spacing={3}>
