@@ -112,14 +112,17 @@
 }
 
 @media (max-width: 992px) {
+  .carousel-section {
+    height: 420px;
+  }
   .carousel-section .top-left-center {
     transform: translate(-15%, -50%);
   }
   .top-left-center p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .top-left-center h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   .carousel-section .top-right {
     width: 70px;
@@ -216,13 +219,13 @@
   border-radius: 5px;
 }
 .service-1 {
-  background-image: url("../public/images/bg-remote-service.jpg");
+  background-image: url("../public/images/bg-remote-support.jpg");
 }
 .service-2 {
-  background-image: url("../public/images/bg-doorstep-service.jpg");
+  background-image: url("../public/images/bg-doorstep-support.jpg");
 }
 .service-3 {
-  background-image: url("../public/images/bg-express-service.png");
+  background-image: url("../public/images/bg-express-support.png");
 }
 .service-4 {
   background-image: url("../public/images/bg-buying-guide.png");
@@ -315,6 +318,9 @@
   padding: 18px;
   float: left;
 }
+.feature-text {
+  display: table-row;
+}
 .feature-heading {
   margin-bottom: 10px;
   font-size: 24px;
@@ -361,6 +367,7 @@
   width: 100%;
   transition: all 0.3s ease;
   object-fit: cover;
+  opacity: 0.9;
 }
 
 .team-caption {

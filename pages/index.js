@@ -105,7 +105,7 @@ const Home = () => {
             <p>Quick Fix | Expert Staff | Affordable</p>
           </div>
           <div className="top-right">
-            <img src="./images/warrenty-logo.png" alt="guarantee image" />
+            <img src="./images/warranty-logo.png" alt="90-days-warranty" />
           </div>
         </section>
         <section className="carousel-bottom">
@@ -280,25 +280,31 @@ const Home = () => {
             >
               <Grid item md={3}>
                 <div className="img">
-                  <img src="./images/work-1.jpg" alt="work-1" />
+                  <img src="./images/work/register.jpg" alt="Register" />
                 </div>
                 <h4>Register</h4>
               </Grid>
               <Grid item md={3}>
                 <div className="img">
-                  <img src="./images/work-2.jpg" alt="work-2" />
+                  <img
+                    src="./images/work/book-appointment.jpg"
+                    alt="Book Appointment"
+                  />
                 </div>
                 <h4>Book Appointment</h4>
               </Grid>
               <Grid item md={3}>
                 <div className="img">
-                  <img src="./images/work-3.jpg" alt="work-3" />
+                  <img
+                    src="./images/work/remote-or-doorstep-service.jpg"
+                    alt="Remote/Doorstep Service"
+                  />
                 </div>
                 <h4>Remote / Doorstep Service</h4>
               </Grid>
               <Grid item md={3}>
                 <div className="img">
-                  <img src="./images/work-4.jpg" alt="work-4" />
+                  <img src="./images/work/fix-it.jpg" alt="Fix It" />
                 </div>
                 <h4>
                   Fix It{" "}
@@ -319,71 +325,84 @@ const Home = () => {
             <Grid container spacing={2}>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/Fast Service.png"
+                  src="./images/feature-icons/fast-service.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">Fast Service</h5>
-                <p className="feature-p">
-                  Immediate Assistance, Easy to schedule & Data is secure during
-                  remote troubleshooting
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">Fast Service</h5>
+                  <p className="feature-p">
+                    Immediate Assistance, Easy to schedule & Data is secure
+                    during remote troubleshooting
+                  </p>
+                </div>
               </Grid>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/Payment.png"
+                  src="./images/feature-icons/secure-payment.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">Secure Payment</h5>
-                <p className="feature-p">
-                  Pay securely via Gpay, Paytm, Phone Pay
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">Secure Payment</h5>
+                  <p className="feature-p">
+                    Pay securely via Gpay, Paytm, Phone Pay
+                  </p>
+                </div>
               </Grid>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/Expert Team.png"
+                  src="./images/feature-icons/expert-team.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">Expert Team</h5>
-                <p className="feature-p">
-                  All our Technician are background verified and trained to
-                  deliver only the best experience
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">Expert Team</h5>
+                  <p className="feature-p">
+                    All our Technician are background verified and trained to
+                    deliver only the best experience
+                  </p>
+                </div>
               </Grid>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/wallet.png"
+                  src="./images/feature-icons/affordable.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">Affordable</h5>
-                <p className="feature-p">
-                  Quick Fix, Low price Guarantee, No Fix No charges*
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">Affordable</h5>
+                  <p className="feature-p">
+                    Quick Fix, Low price Guarantee, No Fix No charges*
+                  </p>
+                </div>
               </Grid>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/Warrenty.png"
+                  src="./images/feature-icons/warranty.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">90 Days Warrenty</h5>
-                <p className="feature-p">
-                  Repeat issue with in ninety (90) days you get Free tech visit.
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">90 Days Warranty</h5>
+                  <p className="feature-p">
+                    Repeat issue with in ninety (90) days you get Free tech
+                    visit.
+                  </p>
+                </div>
               </Grid>
               <Grid item md={4}>
                 <img
-                  src="./images/feature-icons/Award winning.png"
+                  src="./images/feature-icons/award-winning.png"
                   alt="image"
                   className="feature-img"
                 />
-                <h5 className="feature-heading">Award Winning</h5>
-                <p className="feature-p">
-                  250+ Weekly Repairs, 500+ Parts Replacement.
-                </p>
+                <div className="feature-text">
+                  <h5 className="feature-heading">Award Winning</h5>
+                  <p className="feature-p">
+                    250+ Weekly Repairs, 500+ Parts Replacement.
+                  </p>
+                </div>
               </Grid>
             </Grid>
           </Container>
@@ -451,9 +470,9 @@ const Home = () => {
               </Grid>
               <Grid item md={2} className="text-center">
                 <img
-                  src="./images/brand-icons/TOSHIBA-logo.png"
+                  src="./images/brand-icons/toshiba-logo.png"
                   width="100"
-                  alt="TOSHIBA-logo"
+                  alt="toshiba-logo"
                 />
               </Grid>
               <Grid item md={2} className="text-center">
@@ -505,7 +524,7 @@ const Home = () => {
                 <article className="team">
                   <p className="team-figure">
                     <img
-                      src="./images/engineers/Suresh.jpg"
+                      src="./images/engineers/suresh-technician.jpg"
                       alt=""
                       width="270"
                       height="248"
@@ -524,7 +543,7 @@ const Home = () => {
                 <article className="team">
                   <p className="team-figure">
                     <img
-                      src="./images/engineers/Bharath-1.jpg"
+                      src="./images/engineers/bharath-technician.jpg"
                       alt=""
                       width="270"
                       height="248"
@@ -543,7 +562,7 @@ const Home = () => {
                 <article className="team">
                   <p className="team-figure">
                     <img
-                      src="./images/engineers/Pradeep-2.jpg"
+                      src="./images/engineers/pradeep-technician.jpg"
                       alt=""
                       width="270"
                       height="248"
@@ -562,7 +581,7 @@ const Home = () => {
                 <article className="team">
                   <p className="team-figure">
                     <img
-                      src="./images/engineers/surendran-2.jpg"
+                      src="./images/engineers/surendran-technician.jpg"
                       alt=""
                       width="270"
                       height="248"
